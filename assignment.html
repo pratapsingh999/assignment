@@ -1,0 +1,150 @@
+
+<p>1.For a given number N check if it is prime or not. A prime number is a number which is only divisible by 1 and itself.</p>
+ <script>
+    function test_prime(n){
+if (n===1){
+    return "is not a prime number";
+  }
+  else if(n === 2){
+    return  "is a  prime number";
+  }else{
+    for(var x = 2; x < n; x++){
+      if(n % x === 0){
+        return "is not a prime number";
+      }
+    }
+    return " is a  prime number";  
+  }
+}
+// console.log(test_prime(7)+"<br>");
+document.write(test_prime(99)+"<br>");
+document.write(test_prime(23)+"<br>");
+document.write(test_prime(5)+"<br.");
+</script><br>
+
+<p>2.Given a positive integer, N. Find the factorial of N.</p>
+<script>
+    function factorial(n){
+  let answer = 1;
+  if (n == 0 || n == 1){
+    return answer;
+  }else if(n > 1){
+    for(var i = n; i >= 1; i--){
+      answer = answer * i;
+    }return answer;
+  }else{
+    return "number has to be positive."
+  }  
+}
+let n = 4;
+answer = factorial(n)
+console.log("Factorial of " + n + " : " + answer);
+document.write("Factorial of " + n + " : " + answer);
+// console.log("Factorial of " + a + " : " + answer);
+</script><br>
+
+<p>3.You are given an array A of size N. You need to print elements of A in alternate order (starting from index 0)</p>
+<script>
+    var arr = [ 1, 2, 3, 4, 5 ]
+    var N = arr.length;
+    function alternate(arr, N){
+    for(var i = 0; i < N; i++){
+        if (i % 2 == 0){
+            document.write(arr[i] + " ");
+        }
+    }
+}
+alternate(arr, N);
+  
+</script><br>
+ 
+<p>4.Given an array A of size N, print the reverse of it</p>
+<script>
+     let array = [1, 2, 3, 4];
+     let reversearray = [];
+ for (let i = array.length - 1; i >= 0; i--) {
+     reversearray += array[i];
+ }
+
+ console.log(reversearray+"");
+ document.write(reversearray+"");
+</script>
+
+<p>5.Given a sorted array A[] of size N, delete all the duplicate elements from A[]</p>
+<script>
+    var names = ["pratap","singh","akash","aditya","baba","pratap","akash"];
+    var b = names.sort();
+    console.log(b);
+    document.write(b +"<br>");
+      
+    function removeDuplicates(names) {
+        return names.filter((a, b) => names.indexOf(a) === b);
+    }
+      console.log(removeDuplicates(names));
+      document.write(removeDuplicates(names)+"<br>");      
+</script><br>
+
+<p>6. Given a string “nitin”, check if it is palindrome or not</p>
+<script>
+    let values = "nitin";
+    // const reverse = () => {
+    let myrevers = values.toString().split("").reverse().join("");
+    console.log(myrevers);
+    let mystr = values.toString();
+    if(mystr == myrevers){
+        console.log("it is palindrome");
+        document.write("it is palindrome");
+    }else{
+    console.log(" not a palindrome");
+    document.write(" not a palindrome");
+}
+// };
+// reverse();
+</script><br> 
+
+<p>7.Given a String S, reverse the string without reversing its individual words. Words are separated by dots.</p>
+<script>
+   let str = "i like javascript very much";   //i ekil tpircsavaj yrev hcum
+   console.log(str  + "<br>");
+  //  function reverseWords(str) {
+  let revers1 = str.split("").reverse().join("")
+  let reverse2 = revers1.split(" ").reverse().join(" ")
+// }
+// reverseWords();
+// console.log(revers1);
+console.log(reverse2);
+document.write(reverse2 + "<br>"); 
+
+let str1 = "i like javascript very much";   //revers string (hcmu yrey tpircsavaj ekil i);
+   console.log(str1);
+   let revers3 = str.split("").reverse().join("")
+   console.log(revers3);
+
+const sentance = "i like javascript very much"; 
+console.log(sentance) // much.very.javascript.like.i
+  const reversewords = (sentance) => {
+    const words = sentance.split(" ")
+    const revwords = words.reverse()
+    return revwords.join(" ")
+  }
+  console.log(reversewords(sentance));
+
+</script><br>
+
+<p>8.Given a string str containing only lower case alphabets, the task is to sort it in lexicographically-descending order.</p>
+<!-- <script>
+  var str3 = ["pace","apooo"];    //apooo pace
+  var str4 = str3.sort();
+      console.log(str4);
+   </script><br> -->
+
+ <script>
+  const strings = "pace";  // peca
+  const strs = strings.toString().split("").reverse().sort().reverse().join("")
+  console.log(strs);
+  document.write(strs);
+  </script><br>
+
+
+
+  
